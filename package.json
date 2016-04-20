@@ -1,8 +1,26 @@
 {
-  "name": "my-project",
-  "version": "0.1.0",
+  "name": "frontend-nanodegree-mobile-portfolio",
+  "version": "1.0.0",
+  "description": "Changes in main.js:",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt-contrib-uglify": "^1.0.1",
+    "node-modules": "^0.1.4"
+  },
   "devDependencies": {
-    "grunt": "~1.2.0",
-    "grunt-contrib-uglify": "^1.0.1"
-  }
+    "grunt": "^1.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccalbaugh/frontend-nanodegree-mobile-portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ccalbaugh/frontend-nanodegree-mobile-portfolio/issues"
+  },
+  "homepage": "https://github.com/ccalbaugh/frontend-nanodegree-mobile-portfolio#readme"
 }
