@@ -438,8 +438,8 @@ var resizePizzas = function(size) {
         console.log("bug in sizeSwitcher");
     }
 
-    var randomPizzas = document.querySelectorAll(".randomPizzaContainer"); 
-    for (var i = 0; i < randomPizzas.length; i++) { 
+    var randomPizzas = document.getElementsByClassName("randomPizzaContainer");
+    for (var i = 0, len = randomPizzas.length; i < len; i++) {
       randomPizzas[i].style.width = newWidth + '%';
     }
   }
@@ -456,8 +456,9 @@ var resizePizzas = function(size) {
 window.performance.mark("mark_start_generating"); // collect timing data
 
 // This for-loop actually creates and appends all of the pizzas when the page loads
+var pizzasDiv = document.getElementById("randomPizzas");
+
 for (var i = 2; i < 100; i++) {
-  var pizzasDiv = document.getElementById("randomPizzas");
   pizzasDiv.appendChild(pizzaElementGenerator(i));
 }
 
@@ -494,15 +495,15 @@ function updatePositions() {
   var phaseArray = [];
   for (var i = 0; i < 5; i++) {
     phaseArray.push(Math.sin(phase + i));
-  } 
-   
+  }
+
   for (var i = 0, e = 0; i < items.length; i++, e++) {
     if (e >= 5) {
       e = 0;
     }
     items[i].style.left = items[i].basicLeft + 100 * phaseArray[e] + 'px';
   }
-      
+
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
   // Super easy to create custom metrics.
@@ -519,10 +520,13 @@ window.addEventListener('scroll', updatePositions);
 
 // Generates the sliding pizzas when the page loads.
 document.addEventListener('DOMContentLoaded', function() {
-  var cols = 8;
-  var s = 256;
-  for (var i = 0; i < 200; i++) {
-    var elem = document.createElement('img');
+  var cols = 8,
+  s = 256,
+  rows = width / s,
+  requiredNumOfPizzas = rows * cols,
+  elem;
+  for (var i = 0; i < requiredNumOfPizzas; i++) {
+    elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
     elem.style.height = "100px";
