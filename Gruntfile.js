@@ -5,10 +5,10 @@ module.exports = function(grunt) {
 
 		uglify: {
 			build: {
-				src: 'js/perfmatters.js',
-				dest: 'js/perfmatters.min.js',
 				src: 'views/js/main.js',
-				dest: 'views/js/main.min.js'
+				dest: 'views/js/main.min.js',
+				src: 'js/perfmatters.js',
+				dest: 'js/perfmatters.min.js'
 			},
 		},
 	});
