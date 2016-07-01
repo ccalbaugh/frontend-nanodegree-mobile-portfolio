@@ -525,7 +525,7 @@ document.addEventListener('DOMContentLoaded', function() {
   rows = width / s,
   requiredNumOfPizzas = rows * cols,
   elem,
-  movingPizzas = document.getElementById("#movingPizzas1");
+  movingPizzas = document.getElementById("movingPizzas1");
 
   for (var i = 0; i < requiredNumOfPizzas; i++) {
     elem = document.createElement('img');

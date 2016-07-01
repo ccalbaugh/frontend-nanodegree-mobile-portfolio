@@ -8,7 +8,7 @@
     <title>Cameron Pittman: Portfolio</title>
 
     <!-- Hmm, what is the impact of web fonts on speed? Measure it... -->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
 
     <style type="text/css">
 
@@ -40,9 +40,26 @@
       li img { float:left; padding-right: 1em; }
       li p { font-size: 0.9em; font-style: italic; }
 
+      .movers {
+        will-change: transform;
+        -webkit-backface-visibility: hidden; /*added vendor prefix to this */
+                backface-visibility: hidden;
+      }
+
+      footer {
+        padding: 0 0.5em;
+        border-top: 1px solid #ccc;
+      }
+      footer span { float: right; font-style: italic; }
+
+      /* Smartphones (portrait) */
+      @media only screen and (max-width: 480px) {
+        body { font-size: 12px;}
+        header p { padding-left: 4.5em;}
+      }
+
     </style>
 
-    <link href="css/style.css" rel="stylesheet">
     <link async media="print" href="css/print.css" rel="stylesheet">
 
   </head>
@@ -100,6 +117,13 @@
     </script>
     <script async src="http://www.google-analytics.com/analytics.js"></script>
     <script async src="js/perfmatters.min.js"></script>
-
+    <script src='https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js'></script>
+    <script>
+    WebFont.load({
+      google: {
+        families: ['Open Sans: 400, 700']
+      }
+    });
+    </script>
   </body>
 </html>
