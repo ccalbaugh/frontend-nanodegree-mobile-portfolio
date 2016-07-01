@@ -13,7 +13,7 @@
 
 
 ###Changes in index.html
-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'> was changed in the head
+- this file now uses JS WebFonts instead of a css font call
 - the code in style.css was inlined in the head as well
 
 ###Changes in style.css
