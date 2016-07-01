@@ -1,5 +1,3 @@
-
-
 a { color: #12C; }
 a:visited { color: #61C; }
 a:focus { outline: thin dotted; }
@@ -28,8 +26,10 @@ header p span { font-size: 0.8em; font-weight: normal;}
 li img { float:left; padding-right: 1em; }
 li p { font-size: 0.9em; font-style: italic; }
 
-.movers {
+.mover {
   will-change: transform;
+  -webkit-backface-visibility: hidden; /*added vendor prefix to this */
+          backface-visibility: hidden;
 }
 
 footer {
