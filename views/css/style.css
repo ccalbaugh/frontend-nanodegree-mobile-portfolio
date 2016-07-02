@@ -14,7 +14,7 @@ form { display: inline-block; }
 
 #pizzaSize { font-weight: 800; }
 
-.mover { position: fixed; width: 256px; z-index: -1; }
+.mover { position: fixed; width: 256px; z-index: -1; transform: translate(0); backface-visibility: hidden; }
 
 .randomPizzaContainer { float: left; display: -webkit-box; display: -ms-flexbox; display: flex; }
 
